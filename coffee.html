@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Order</title>
+</head>
+<body>
+    <form method="POST" action="http://requestb.in/qa0h45qa">
+
+
+       <label for="roast">
+           Select your roast.
+       </label>
+
+
+        <select id="roast" name="roast">
+            <option>Light</option>
+            <option>Dark</option>
+        </select>
+        <br>
+
+        <input type="text" id="quantity" name="quantity" placeholder="How many?">
+        <br>
+        <input type="checkbox" id="renew" name="renew" value="yes">
+        <label for="renew">
+            Would you like to sign up for auto renewal?
+        </label>
+        <br>
+
+
+        <input type="text" id="address" name="address" placeholder="Street Address">
+        <br>
+        <input type="text" id="zip" name="zip" placeholder="State and Zip code">
+        <br>
+        <button type="submit">Send Order</button>
+    </form>
+</body>
+</html>

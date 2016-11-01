@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Ordering</title>
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+</head>
+<body>
+
+    <link rel="stylesheet" href="css/pizza.css">
+
+    <div id="pizza">
+
+        <form method="POST" action="https://requestb.in/qa0h45qa">
+
+
+            <input name="email" type="text" placeholder="Enter your Email"><br>
+
+
+
+            <div id="tops">
+                What toppings do you want?
+                <br>
+            <label>
+                <input type="checkbox" name="top[]" value="cheese">Cheese
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="top[]" value="pepparoni">Pepparoni
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="top[]" value="sausage">Sausage
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="top[]" value="bacon">Bacon
+            </label>
+            </div>
+            <br>
+
+            <div id="delivery">
+            Pickup or Delivery?
+            <br>
+            <label>
+                <input type="radio" name="pick1" value="yes">Yes
+            </label><br>
+            <label>
+                <input type="radio" name="pick1" value="no">No
+            </label>
+            <br>
+             </div>
+
+            <div id="crust_choice">
+                <label for="crust">Select your Crust</label>
+                <select id="crust" name="crust">
+                    <option>Regular</option>
+                    <option>Thin</option>
+                    <option>Pan</option>
+                </select>
+            </div>
+
+            <br>
+
+            <button type="submit">Send</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

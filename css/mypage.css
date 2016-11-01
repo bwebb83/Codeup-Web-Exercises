@@ -1,0 +1,53 @@
+body{
+    background-image:url("../img/sayagata.png");
+}
+#mainNav{
+    background-color: coral;
+}
+h1,h2{
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+#mainHeader{
+    margin-top:50px;
+}
+
+#about p{
+    font-size:20px;
+}
+
+#portfolio p{
+    font-size:20px;
+}
+
+#services p{
+    font-size:20px;
+}
+
+#contact p{
+    font-size:20px;
+}
+
+#name{
+    font-family: 'Pacifico', cursive;
+    font-size:20px;
+}
+
+hr.style-seven {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}

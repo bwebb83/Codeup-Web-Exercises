@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Form</title>
+</head>
+<body>
+
+    <h1>User Login</h1>
+
+    <form method="POST" action="http://requestb.in/qa0h45qa">
+        <p>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" placeholder="Enter Username">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter Password">
+        </p>
+        <p>
+            <button name="Go" value="Login">Login</button>
+        </p>
+    </form>
+
+    <h1>Compose Email</h1>
+
+    <form method="POST" action="http://requestb.in/qa0h45qa">
+        <input type="text" id="to" name="to" placeholder="To"><br>
+        <input type="text" id="from" name="from" placeholder="From"><br>
+        <input type="text" id="subject" name="subject" placeholder="Subject"><br>
+        <textarea id="body" name="body" placeholder="Body"></textarea><br>
+        <button name="Submit" value="Submit">Send</button><br>
+        <input type="checkbox" id="save" name="save" value="yes" checked>
+        <label for="save">Do you want to save a copy?</label>
+    </form>
+
+    <h1>Multiple Choice Test</h1>
+
+    <form method="POST" action="http://requestb.in/qa0h45qa">
+        What is the capital of the US?<br>
+        <label>
+        <input type="radio" name="a1" value="Washington">Washington
+            </label>
+        <br>
+
+        <label>
+            <input type="radio" name="a1" value="Dallas">Dallas
+        </label>
+        <br>
+
+
+        <label>
+            <input type="radio" name="a1" value="San Francisco">San Francisco
+        </label>
+        <br>
+
+        What country is England in?<br>
+
+        <label>
+            <input type="radio" name="a2" value="US">US
+        </label>
+        <br>
+
+        <label>
+            <input type="radio" name="a2" value="Europe">Europe
+        </label>
+        <br>
+
+        <label>
+            <input type="radio" name="a2" value="Asia">Asia
+        </label>
+        <br>
+        What states have I lived?
+        <br>
+
+        <label>
+            <input type="checkbox" id="state1" name="a3[]" value="Texas">Texas
+        </label>
+        <br>
+
+        <label>
+            <input type="checkbox" id="state2" name="a3[]" value="Missouri">Missouri
+        </label>
+        <br>
+
+        <label>
+            <input type="checkbox" id="state3" name="a3[]" value="California">California
+        </label><br>
+
+        <label for="animal">What animals have I owned?</label><br>
+
+        <select id="animal" name="animal[]" multiple>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="pig">Pig</option>
+        </select><br>
+
+
+        <button name="submit" value="submit">Done</button><br>
+
+    </form>
+
+
+    <h1>Select Testing</h1>
+
+    <form method="POST" action="https://requestb.in/qa0h45qa">
+        <label for="cat">Do you have a cat?</label>
+        <select id="cat" name="cat">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+        <button name="submit" value="submit">Done</button>
+    </form>
+</body>
+</html>

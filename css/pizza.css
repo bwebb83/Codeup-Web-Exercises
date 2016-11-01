@@ -1,0 +1,55 @@
+body {
+    background-image: url("../img/pizza.png");
+    color:red;
+    text-align:center;
+    margin-top:8em;
+    font-family:'Coiny', cursive;
+    font-size:11px;
+}
+
+
+#pizza{
+    height:250px;
+    width:400px;
+    background-image: url("../img/shattered.png");
+    margin-left:425px;
+}
+
+
+#email{
+    height:50px;
+    width:80px;
+    background-color:#30C8FF;
+
+}
+
+input[type="text"] {
+    border:1px solid black;
+    height:50px;
+    width:200px;
+    background-color: snow;
+}
+
+#tops{
+    height:100px;
+    width:200px;
+    background-color:#5CE879;
+    float:left;
+
+}
+
+#delivery{
+    height:100px;
+    width:200px;
+    background-color:#5CE879;
+    float:right;
+    margin-top:-20px;
+
+}
+
+#crust_choice{
+    height:110px;
+    width:400px;
+    background-color: #FFFE3D;
+}
+
