@@ -1,10 +1,9 @@
 body{
     background-image:url("../img/sayagata.png");
     background-attachment: fixed;
-    font-family: "Helvetica", "Arial", sans-serif;
 }
 #mainNav{
-    background-color: coral;
+    background-color: #E8A85C;
 }
 
 .navbar-inverse .navbar-nav>li>a{
@@ -19,13 +18,15 @@ body{
 h1,h2{
     text-align:center;
     margin-top:20px;
-    margin-bottom:40px;
+    margin-bottom:20px;
+    font-family: Serif, "Times New Roman";
 }
 
 
 #mainHeader{
     margin-top:50px;
 }
+
 
 #about p{
     font-size:20px;
@@ -52,7 +53,7 @@ h1,h2{
 hr.style-seven {
     height: 30px;
     border-style: solid;
-    border-color: black;
+    border-color: #C2E4E8;
     border-width: 1px 0 0 0;
     border-radius: 20px;
 }
@@ -62,7 +63,7 @@ hr.style-seven:before {
     height: 30px;
     margin-top: -31px;
     border-style: solid;
-    border-color: black;
+    border-color: #C2E4E8;
     border-width: 0 0 1px 0;
     border-radius: 20px;
 }
@@ -81,6 +82,8 @@ hr.style-seven:before {
     background-color: #2aabd2;
     left: 50%;
     margin-left: 33px;
+    box-sizing: content-box;
+    height:1000px;
 }
 .timeline > li {
     margin-bottom: 20px;
@@ -112,6 +115,7 @@ hr.style-seven:before {
     position: relative;
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    background-color:#e8a85c
 }
 .timeline > li > .timeline-panel:before {
     position: absolute;
@@ -155,7 +159,7 @@ hr.style-seven:before {
 }
 .timeline > li.timeline-inverted > .timeline-panel {
     float: right;
-    margin-right:-50px;
+    margin-right:-65px;
 }
 .timeline > li.timeline-inverted > .timeline-panel:before {
     border-left-width: 0;
@@ -169,21 +173,7 @@ hr.style-seven:before {
     left: -14px;
     right: auto;
 }
-.timeline-badge.primary {
-    background-color: #2e6da4 !important;
-}
-.timeline-badge.success {
-    background-color: #3f903f !important;
-}
-.timeline-badge.warning {
-    background-color: #f0ad4e !important;
-}
-.timeline-badge.danger {
-    background-color: #d9534f !important;
-}
-.timeline-badge.info {
-    background-color: #5bc0de !important;
-}
+
 .timeline-title {
     margin-top: 0;
     color: inherit;
@@ -199,6 +189,48 @@ hr.style-seven:before {
 #lego{
     height:120px;
     width:120px;
-    margin-left:20px;
+    margin-left:13px;
     margin-top:-20px;
+}
+
+#utsa{
+    height:120px;
+    width:120px;
+    float:right;
+    margin-right:20px;
+}
+
+#teacher{
+    height:120px;
+    width:120px;
+    margin-left:13px;
+}
+
+#code{
+    height:120px;
+    width:120px;
+    float:right;
+    margin-right:20px;
+}
+
+.alignright1{
+    float:right;
+}
+.alignleft1{
+    float:left;
+}
+
+.aligncenter{
+    text-align:center;
+}
+
+.resumecolor{
+    background-color: #3d845d;
+}
+
+ul a{
+    color: #e8a85c;
+}
+.clearl{
+    clear:left;
 }
