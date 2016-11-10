@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Loop</title>
+</head>
+<body>
+    <script>
+        var startNumber = Math.floor(Math.random() * 10) + 1;
+        for (var i = 1; i <= 10; i += 1) {
+            var result = i * startNumber;
+            console.log(startNumber + ' times ' + i + ' is ' + result);
+        }
+
+
+        for (var i = 0; i < 10; i += 1) {
+             randomNumber = Math.floor(Math.random() * 180) + 20;
+             oddOrEven = randomNumber % 2 == 0 ? 'even' : 'odd';
+
+             console.log(randomNumber + ' is ' + oddOrEven);
+         }
+
+         for (var i = 100; i>=5; i -=5){
+             console.log(i);
+         }
+
+    </script>
+
+</body>
+</html>

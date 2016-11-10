@@ -13,22 +13,24 @@ var ryan = 250;
 var cameron = 180;
 var george = 320;
 
+var discount = .10;
+
 if (ryan > 200) {
-    console.log("Ryan gets a discount of " + (ryan * .10));
+    console.log("Ryan gets a discount of $" + (ryan * discount));
 } else {
-    console.log("Ryan needs to pay" + (200 - ryan));
+    console.log("Ryan needs to pay" + (200 - ryan) + " to get the discount.");
 }
 
 if (cameron > 200) {
-    console.log("Cameron gets a discount of" + (cameron * .10));
+    console.log("Cameron gets a discount of $" + (cameron * discount));
 } else {
     console.log("Cameron needs to pay " + (200 - cameron) + " to get the discount.");
 }
 
 if (george > 200) {
-    console.log("George gets a discount of " + (george * .10));
+    console.log("George gets a discount of $" + (george * discount));
 } else {
-    console.log("George needs to pay" + (200 - george));
+    console.log("George needs to pay" + (200 - george) + " to get the discount.");
 }
 
 
