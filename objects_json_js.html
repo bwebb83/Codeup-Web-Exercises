@@ -15,38 +15,38 @@
     // Be creative and add at least 5 books to the array
     var books = [{
         title: "Lord of the Rings",
-        author: [{
+        author: {
             firstName: "JRR",
             lastName: "Tolkein",
-        }],
+        },
     },
         {
             title: "Cat in the Hat",
-            author: [{
+            author: {
                 firstName: "Dr.",
                 lastName: "Seuss",
-            }],
+            },
         },
         {
             title: "James and the Giant Peach",
-            author: [{
+            author: {
                 firstName: "Rohld",
                 lastName: "Dahl",
-            }],
+            },
         },
         {
             title: "Jurassic Park",
-            author: [{
+            author: {
                 firstName: "Michael",
                 lastName: "Chriton",
-            }],
+            },
         },
         {
             title: "Blood Meridian",
-            author:[ {
+            author: {
                 firstName: "Cormac",
                 lastName: "McCarthy",
-            }],
+            },
         },
     ];
 
@@ -56,12 +56,12 @@
     // todo:
     // Loop through the array of books using .forEach and print out the specified information about each one.
     // start loop here
-    books.forEach(function(title, index){
+    books.forEach(function (book, index) {
 
-     console.log("Book #" + index);
-    console.log("Title: " + title);
-    //console.log("Author: " + todo);
-    //console.log("---");
+        console.log("Book #" + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---");
     })
 </script>
 
