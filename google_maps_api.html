@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps API</title>
+
+    <!--styling of the map-->
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- div to hold map -->
+<div id="map-canvas"></div>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-j5hZzDlaf9OnF7HzgdE9BPmXSFAHKFE"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    (function () {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 17,
+
+            //set type of map to show
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        // Set our addresses to geocode
+        var addresses = [
+
+            { "address":"1615 Access Route 1604, San Antonio, TX 78232",
+                "location":"Las Palapas",
+                "info":'Yum! Eat it! <br><ul>Good stuff to eat! <li>Tacos!</li><li>Enchiladas!</li><li>Carne Guissada!</li></ul>',
+                "url":"img/palapas.jpeg"
+            },
+            {"address":"18195 US-281, San Antonio, TX 78232",
+                "location":"Laguna Madre",
+                "info":"Delicious sea food!",
+                "url":"img/laguna.jpeg"
+            },
+
+            {"address":"438 NW Loop 410 #101, San Antonio, TX 78216",
+                "location":"Chipotle",
+                "info":"Eat that Burrito!",
+                "url":"img/chipotle.jpeg"}
+
+
+
+
+        ];
+
+// Init geocoder object
+        var geocoder = new google.maps.Geocoder();
+
+// Geocode our addresses
+        geocoder.geocode({"addresses": "address"}, function (results, status) {
+
+            // Check for a successful result
+            if (status == google.maps.GeocoderStatus.OK) {
+
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+
+
+                //icon preferences
+                var iconBase = {
+                    scaledSize: new google.maps.Size(40, 40)
+                };
+                var marker;
+                //sets marker options including animations
+                  addresses.forEach(function(address){marker = new google.maps.Marker({
+                    location: address.geometry.location,
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    icon: iconBase
+                 })});
+
+                //set new infowindow
+                var infowindow = new google.maps.InfoWindow();
+
+
+                //sets click functionality to marker
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.open(map, this);
+                });
+
+            } else {
+
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+        });
+
+
+    })();
+</script>
+
+</body>
+</html>

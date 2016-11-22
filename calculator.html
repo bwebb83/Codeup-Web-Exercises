@@ -8,38 +8,47 @@
     <link href="css/calculator.css" rel="stylesheet">
 </head>
 <body>
+
+<audio src="music/neo.mp3" autoplay>
+    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+</audio>
+
+<!--<video autoplay loop muted id="background">-->
+    <!--<source src="img/neon.gif" type="video/gif">-->
+<!--</video>-->
+
 <h1>It's a Calculator!!</h1>
 
+<div class="container-fluid col-lg-4 col-lg-offset-4" id="body">
+    <br>
+    <input type="text" id="firsttxt" readonly>
+    <input type="text" id="secondtxt" readonly>
+    <input type="text" id="thirdtxt" readonly>
+    <br><br>
 
-<!--<div class="container-fluid" id="everything">-->
+    <a id="one" value="1" class="button">1</a>
+    <a id="two" value="2" class="button">2</a>
+    <a id="three" value="3" class="button">3</a>
+    <a id="plus" value="+" class="operator">+</a>
+    <a id="four" value="4" class="button">4</a>
+    <a id="five" value="5" class="button">5</a>
+    <a id="six" value="6" class="button">6</a>
+    <a id="minus" class="operator">-</a>
+    <a id="seven" value="7" class="button">7</a>
+    <a id="eight" value="8" class="button">8</a>
+    <a id="nine" value="9" class="button">9</a>
+    <a id="times" class="operator">*</a>
+    <a id="deci" class="button">.</a>
+    <a id="zero" value="0" class="button">0</a>
+    <a id="pi" class="button" data="3.14">π</a>
+    <a id="divide" class="operator">/</a>
+    <a id="clear" class="clear">C</a>
+    <a id="negatives" >+/-</a>
+    <a id="percentages">%</a>
+    <a id="equals" class="equals">=</a>
 
-    <div class="container-fluid col-lg-4 col-lg-offset-4" id="body">
+</div>
 
-        <br>
-        <input type="text" id="firsttxt" placeholder="first box">
-        <input type="text" id="secondtxt" placeholder="2nd">
-        <input type="text" id="thirdtxt" placeholder="last box">
-        <br><br>
-
-        <a id="one" value="1" class="button">1</a>
-        <a id="two" value="2" class="button">2</a>
-        <a id="three" value="3" class="button">3</a>
-        <a id="plus" value="+" class="operator">+</a>
-        <a id="four" value="4" class="button">4</a>
-        <a id="five" value="5" class="button">5</a>
-        <a id="six" value="6" class="button">6</a>
-        <a id="minus" class="operator">-</a>
-        <a id="seven" value="7" class="button">7</a>
-        <a id="eight" value="8" class="button">8</a>
-        <a id="nine" value="9" class="button">9</a>
-        <a id="times" class="operator">*</a>
-        <a id="clear" class="clear">c</a>
-        <a id="zero" value="0" class="button">0</a>
-        <a id="equals" class="equals">=</a>
-        <a id="divide" class="operator">/</a>
-        </div>
-
-<!--</div>-->
 
 <script src="js/calculator.js"></script>
 </body>
