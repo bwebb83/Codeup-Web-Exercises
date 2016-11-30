@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Exercises</title>
+    <script src="js/jquery-2.2.4.js"></script>
+
+    <script>
+        'use strict';
+        $(document).ready(function () {
+//        $('li').css('font-size' , '20px');
+//        $('h1,p,li').css('background-color', 'yellow');
+//        $('ul li:last').css('font-weight','bold');
+//        var contents = $('h1').html();
+//        alert(contents);
+            $('h1').click(function(){
+                alert("You clicked the h1!");
+            });
+            $('p').dblclick(function(){
+               $(this).css('font-size','18px');
+            });
+            $('li').hover(
+                    function(){
+                        $(this).css('color','red');
+                    },
+                    function(){
+                        $(this).css('color','black');
+                    }
+            );
+
+
+
+        });
+    </script>
+
+</head>
+<body>
+<h1 id="header" class="codeup">This is the heading man!</h1>
+<p id="paragraph" class="codeup">Bacon ipsum dolor amet alcatra strip steak pork meatball brisket ground round jerky
+    salami cow pastrami turducken corned beef rump andouille.Leberkas bacon capicola pig venison doner shank ball tip.
+    Porchetta andouille capicola, short loin chicken biltong beef beef ribs ball tip swine pork loin cupim pastrami hamburger.
+    Pig pancetta pastrami kevin jowl biltong.</p>
+<div id="div" class="codeup">
+    <ul id="ulist" class="list">
+        <li id="list" class="list">Stuff</li>
+        <li id="list1" class="list">Stuff 2</li>
+        <li id="list3" class="list">Stuff 3</li>
+    </ul>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Faq</title>
+    <style>
+        .invisible {
+            display:none;
+        }
+
+    </style>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('dt').click(function (event) {
+                event.preventDefault();
+                $(this).next().toggleClass('invisible');
+
+
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>10 FAQs About National Parks!</h1>
+<dl>
+    <dt>Where is Yellowstone National Park?</dt>
+    <dd class="invisible">Too far, don't bother coming here.</dd>
+    <dt>Is there camping?</dt>
+    <dd class="invisible">Whatever floats your boat.</dd>
+    <dt>How much is it to get in?</dt>
+    <dd class="invisible">$100 for you. Free for everyone else.</dd>
+    <dt>What kind of animals live in Yellowstone?</dt>
+    <dd class="invisible">The kind that stop talking and stare at you when you walk in the room.</dd>
+    <dt>Can I bring my dog?</dt>
+    <dd class="invisible">Yes, they will be eaten by bears, though.</dd>
+    <dt>Can I bring my kids?</dt>
+    <dd class="invisible">Yes, they will be eaten by bears, though.</dd>
+    <dt>Can I bring my guitar?</dt>
+    <dd class="invisible">Shut up.</dd>
+    <dt>Can my friend bring his bongos?</dt>
+    <dd class="invisible">Seriously, shut up.</dd>
+    <dt>Can we start a drum circle?</dt>
+    <dd class="invisible">I hate you.</dd>
+    <dt>Can I hide in the woods dressed in the carcass of a deer, and terrify campers in the middle of the night?</dt>
+    <dd class="invisible">Yes, yes you can.</dd>
+</dl>
+
+
+
+</body>
+</html>
