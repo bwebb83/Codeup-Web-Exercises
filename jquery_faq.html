@@ -8,13 +8,30 @@
             display:none;
         }
 
+
     </style>
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function () {
+
+
+            $('ul>li:first-child').css('font-weight', 'bold');
+
+            $('#yellowToggle').click(function () {
+                $('#ystone').slideToggle();
+            });
+
+            $('#deathToggle').click(function(){
+                $('#dvalley').slideToggle();
+            });
+
+            $('#glacierToggle').click(function(){
+                $('#glacier').slideToggle();
+            });
+
             $('dt').click(function (event) {
                 event.preventDefault();
-                $(this).next().toggleClass('invisible');
+                $(this).next().slideToggle();
 
 
             });
@@ -46,6 +63,31 @@
     <dd class="invisible">Yes, yes you can.</dd>
 </dl>
 
+<h3 id="yellowToggle">Yellowstone</h3>
+<ul id="ystone" class="invisible">
+    <li>Located in Wyoming</li>
+    <li>First National Park in the US</li>
+    <li>Spans 3,468.4 square miles</li>
+    <li>Location of Old Faithful</li>
+</ul>
+
+
+<h3 id="deathToggle">Death Valley</h3>
+<ul id="dvalley" class="invisible">
+    <li>Between California and Nevada</li>
+    <li>Became National Park in 1994</li>
+    <li>Hottest and Driest Place in North America</li>
+    <li>Became a Dark Sky Park in 2013</li>
+</ul>
+
+
+<h3 id="glacierToggle">Glacier</h3>
+<ul id="glacier" class="invisible">
+    <li>Located in Montana</li>
+    <li>Over 1 Million Acres</li>
+    <li>Glaciers May Disappear by 2030</li>
+    <li>Borders Canada</li>
+</ul>
 
 
 </body>
