@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        #map {
+            height: 450px;
+            width: 100%;
+            border: solid transparent 10px;
+        }
+
+        #weather {
+            height: 165px;
+            width: 1260px;
+        }
+
+        #innerStuff {
+            float: left;
+            border: solid white 1px;
+            text-align: center;
+            height: 170px;
+            width: 250px;
+            color: white;
+            border-radius: 25px;
+            margin-left: 5px;
+            background-size: cover;
+            background-image:url('img/stars.jpg')
+        }
+
+        body{
+            background-image:url("img/landscape.jpg")
+        }
+
+        #header {
+            text-align: center;
+            color:white;
+        }
+
+        #top{
+            color:white;
+            text-align:center;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+
+<h2 id="top">Weather Map</h2>
+<h3 id="header"></h3>
+
+<div id="weather" class="col-lg-4 col-lg-offset-2 "></div>
+
+
+<div id="map"></div>
+
+
+<script>
+
+
+    <!--Initialize Google Map and Marker-->
+    function initMap() {
+        var sa = {lat: 29.4241, lng: -98.4936};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: sa
+        });
+        var marker = new google.maps.Marker({
+            position: sa,
+            map: map,
+            draggable: true
+        });
+        //weather of initial position
+        updatePosition();
+
+        //        initialize listener for drag event
+        google.maps.event.addListener(marker, 'dragend', function (event) {
+            updatePosition();
+        });
+
+        //function to get lat and lon from dragging marker
+        function updatePosition() {
+            latPosition = marker.getPosition().lat();
+            longPosition = marker.getPosition().lng();
+            request();
+            console.log(latPosition + " " + longPosition);
+        }
+    }
+
+
+    //initialize weather api and populate forecast box
+    var request = function () {
+        var weatherApi = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "d413dc25076d3fc1b3947e9b50fd4d57",
+            lat: latPosition,
+            lon: longPosition,
+            units: "imperial",
+            cnt: 3
+        }).done(function (data) {
+            $('#weather').html("");
+            console.log(data);
+            var head = data.city.name + " 3-Day Forecast";
+
+            $('#header').html(head);
+            data.list.forEach(function (object, i) {
+                var pic = data.list[i].weather[0].icon;
+                var id = data.list[i].weather[0].id;
+
+//                //storm gif
+//                if(id >= 200 && id <= 231){
+//                    document.getElementById('innerStuff').css('background-image',"url('img/storm.gif')");
+//                }
+//                //drizzle gif
+//                if(id >= 300 && id <= 321){
+//                    document.getElementById('innerStuff').css('background-image', "url('img/drizzle.gif')");
+//                }
+//                //rain
+//                if( id >= 500 && id <= 531){
+//                    document.getElementById('innerStuff').css('background-image', "url('img/rain.gif')");
+//                }
+//                //snow
+//                if( id >= 600 && id <= 622){
+//                    document.getElementById('innerStuff').css('background-image',"url('img/snow.gif')");
+//                }
+//                //atmosphere
+//                if( id >= 701 && id <= 781){
+//                    document.getElementById('innerStuff').css('background-image', "url('img/volcano.gif')");
+//                }
+//                //clear
+//                if ( id == 800){
+//                    document.getElementById('innerStuff').css('background-image', "url('img/clear.gif')");
+//                }
+//                //cloudy
+//                if ( id >= 801 && id <= 804){
+//                    document.getElementById('innerStuff').css('background-image', "url('img/clouds.gif')");
+//                }
+//                //extreme
+//                if ( id >= 900 && id <=906){
+//                    document.getElementById('innerStuff').css('background-image', "url('img/hail.gif')");
+//                }
+//                if (id >= 951 && id <= 962){
+//                    document.getElementById('innerStuff').css('background-image', "url('img/nino.gif')");
+//                }
+
+
+
+
+
+
+                var template = "<div id='innerStuff'>" + "Day " + [i + 1] + "<br>" + data.list[i].temp.max + "&deg" + " / "
+                        + data.list[i].temp.min + "&deg" + "<br>" + "<img src='http://openweathermap.org/img/w/" + pic + ".png'>"
+                        + "<br>" + data.list[i].weather[0].main + ":" + " " + data.list[i].weather[0].description + "<br>"
+                        + "Humidity: " + data.list[i].humidity + "<br>" + "Wind: " + data.list[i].speed + "<br>"
+                        + "Pressure: " + data.list[i].pressure + "</div>";
+                $('#weather').append(template);
+            });
+        });
+    };
+
+
+</script>
+
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-j5hZzDlaf9OnF7HzgdE9BPmXSFAHKFE&callback=initMap">
+</script>
+
+
+</body>
+</html>

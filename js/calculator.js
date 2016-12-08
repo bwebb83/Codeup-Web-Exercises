@@ -1,5 +1,6 @@
-"use strict";
+
 (function () {
+    "use strict";
     //variables
     var buttons = document.getElementsByClassName("button");
     var operators = document.getElementsByClassName("operator");
