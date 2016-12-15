@@ -113,23 +113,23 @@
 
 //                //storm gif
 //                if(id >= 200 && id <= 231){
-//                    document.getElementById('innerStuff').css('background-image',"url('img/storm.gif')");
+//                    document.getElementById('innerStuff + i').css('background-image',"url('img/storm.gif')");
 //                }
 //                //drizzle gif
 //                if(id >= 300 && id <= 321){
-//                    document.getElementById('innerStuff').css('background-image', "url('img/drizzle.gif')");
+//                    document.getElementById('innerStuff + i').css('background-image', "url('img/drizzle.gif')");
 //                }
 //                //rain
 //                if( id >= 500 && id <= 531){
-//                    document.getElementById('innerStuff').css('background-image', "url('img/rain.gif')");
+//                    document.getElementById('innerStuff = i').css('background-image', "url('img/rain.gif')");
 //                }
 //                //snow
 //                if( id >= 600 && id <= 622){
-//                    document.getElementById('innerStuff').css('background-image',"url('img/snow.gif')");
+//                    document.getElementById('innerStuff + i').css('background-image',"url('img/snow.gif')");
 //                }
 //                //atmosphere
 //                if( id >= 701 && id <= 781){
-//                    document.getElementById('innerStuff').css('background-image', "url('img/volcano.gif')");
+//                    document.getElementById('innerStuff + i').css('background-image', "url('img/volcano.gif')");
 //                }
 //                //clear
 //                if ( id == 800){
@@ -151,8 +151,8 @@
 
 
 
-
-                var template = "<div id='innerStuff'>" + "Day " + [i + 1] + "<br>" + data.list[i].temp.max + "&deg" + " / "
+                //template to populate innerStuff
+                var template = "<div id='innerStuff' + i >" + "Day " + [i + 1] + "<br>" + data.list[i].temp.max + "&deg" + " / "
                         + data.list[i].temp.min + "&deg" + "<br>" + "<img src='http://openweathermap.org/img/w/" + pic + ".png'>"
                         + "<br>" + data.list[i].weather[0].main + ":" + " " + data.list[i].weather[0].description + "<br>"
                         + "Humidity: " + data.list[i].humidity + "<br>" + "Wind: " + data.list[i].speed + "<br>"
